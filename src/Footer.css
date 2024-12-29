@@ -104,6 +104,10 @@
       margin: 20px 0;
     }
 
+    .copy{
+      font-style: italic;
+      font-size: 0.5rem;
+    }
 
     .footer-logo img {
       width: 200px;

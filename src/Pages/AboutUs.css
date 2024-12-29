@@ -25,11 +25,12 @@
     width: 45%;
     height: 400px; /* Adjust size as needed */
     background-color: #ddd;
-    /* background-image: url('/path-to-your-image.jpg'); */
+    background-image: url('https://res.cloudinary.com/daxeovezx/image/upload/v1735508503/aboutus_lrig6w.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 10px;
 }
+
 
 .image-caption {
     position: absolute;
