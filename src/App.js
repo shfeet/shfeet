@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'; 
 import Navbar from './Navbar';
-import Modal from './Modal';
+// import Modal from './Modal';
 import MenuPage from './Pages/MenuPage';
 import WomenMenuPage from './Pages/WomenMenuPage';
 import Checkout from './Pages/Checkout'; // Import the Checkout component
@@ -22,13 +22,13 @@ const AppContent = ({ cartItems, setCartItems, updateCartItem, clearCart, showOr
     setCartItems(updatedCart);
   };
 
-  useEffect(() => {
-    if (location.pathname === '/') {
-      setShowModal(true);
-    } else {
-      setShowModal(false); 
-    }
-  }, [location.pathname]); 
+  // useEffect(() => {
+  //   if (location.pathname === '/') {
+  //     setShowModal(true);
+  //   } else {
+  //     setShowModal(false); 
+  //   }
+  // }, [location.pathname]); 
 
   return (
     <div className="App">
@@ -46,7 +46,7 @@ const AppContent = ({ cartItems, setCartItems, updateCartItem, clearCart, showOr
         <Route path="/about" element={<AboutUs />} />
         {/* Other routes here */}
       </Routes>
-      {location.pathname === '/' && <Modal show={showModal} onClose={handleCloseModal} />}
+      {/* {location.pathname === '/' && <Modal show={showModal} onClose={handleCloseModal} />} */}
       {/* Render OrderModal based on orderStatus */}
       {showOrderModal && <OrderModal status={orderStatus} onClose={() => setShowOrderModal(false)} />}
     </div>

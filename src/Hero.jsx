@@ -8,7 +8,7 @@ const HeroSection = () => {
   const images = [
     "https://res.cloudinary.com/daxeovezx/image/upload/v1732734941/hero1-min_dmebwh.jpg", // Replace with your Cloudinary links
     "https://res.cloudinary.com/daxeovezx/image/upload/v1732734941/pexels-kalz-michael-1277172-3558804-min_x7wavq.jpg",
-    "https://res.cloudinary.com/daxeovezx/image/upload/v1732734941/pexels-jose-martin-segura-benites-1422456152-27174560-min_sdsxy4.jpg",
+    "https://res.cloudinary.com/daxeovezx/image/upload/v1735494758/hero3_lutn7h.jpg",
   ];
 
   useEffect(() => {
@@ -40,8 +40,7 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Each piece is made from a 100% leather quality and handmade from the
-          South of Nigeria with extreme precision and love.
+          Each piece is made from a 100% leather quality and handmade with extreme precision and love.
         </motion.p>
         <a href="/menu">
         <motion.button

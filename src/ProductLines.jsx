@@ -14,9 +14,9 @@ const ProductLines = () => {
       img: "https://res.cloudinary.com/daxeovezx/image/upload/v1732752627/high-heel_hpbfhf.png", // Replace with your Cloudinary link
     },
     {
-      title: "Sports Shoes",
-      description: "Durable and high-performance shoes for athletes.",
-      img: "https://res.cloudinary.com/daxeovezx/image/upload/v1732754065/run_itoz23.png", // Replace with your Cloudinary link
+      title: "Other Leather Products",
+      description: "Durable and high-quality leather products  for everyone.",
+      img: "https://res.cloudinary.com/daxeovezx/image/upload/v1735498971/belt_1_muj6u6.png", // Replace with your Cloudinary link
     },
     {
       title: "Custom Designs",

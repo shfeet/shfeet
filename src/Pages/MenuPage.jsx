@@ -17,7 +17,7 @@ const sampleItems = [
   { id: 12, name: "DIKE", price: 18000, description: "Big toe Buckle Strap Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735415401/6_wiwopn.jpg' },
   { id: 13, name: "EBUBEAGU", price: 30000, description: "X-Strap Halfshoe", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735415401/11_enau0u.jpg' },
   { id: 14, name: "ICHAKA IKE", price: 30000, description: "X-Strap Halfshoe", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735415401/12_odugfl.jpg' },
-  { id: 15, name: "AKAGIAKU", price: 18000, description: "T-H Strap Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735415402/4_xtpqqp.jpg' },
+  { id: 15, name: "AKAJIAKU", price: 18000, description: "T-H Strap Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735415402/4_xtpqqp.jpg' },
 ];
 
 const MenuPage = ({ cartItems, setCartItems }) => {
