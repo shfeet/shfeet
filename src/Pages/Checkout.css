@@ -1,0 +1,172 @@
+
+.checkouts {
+    position: relative; /* Required for the overlay pseudo-element */
+    padding: 50px 20px; /* Add spacing for content */
+    background: url('https://res.cloudinary.com/daxeovezx/image/upload/v1732497559/pexels-danyalmalik2770-19166246-min_xi53oq.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image scales properly */
+    color: white; /* Text color for readability */
+    
+    z-index: 1; /* Ensures content is above the overlay */
+    min-height: 400px; /* Adjust based on content needs */
+  }
+  
+  .checkouts::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Places the overlay behind the content */
+  }
+  
+
+
+
+
+
+/* Checkout.css */
+.checkout-page {
+    position: relative; /* Required for pseudo-element overlay */
+    max-width: 800px;
+    margin: 40px auto; /* Centers the content */
+    padding: 30px; /* Inner padding */
+    background: url('https://res.cloudinary.com/daxeovezx/image/upload/v1732497559/pexels-danyalmalik2770-19166246-min_xi53oq.jpg') no-repeat center center;
+    background-size: cover; /* Ensures the image scales properly */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    color: white; /* Text color */
+    font-size: 20px;
+    z-index: 1; /* Ensures content is above the overlay */
+  }
+
+
+  .checkout-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* White overlay with transparency */
+    border-radius: 10px; /* Matches the container's border-radius */
+    z-index: -1; /* Places the overlay behind the content */
+  }
+
+
+
+h1, h2 {
+    color:white; /* Darker text for headings */
+    text-align: center; /* Centered text */
+    margin-bottom: 20px; /* Space below headings */
+}
+
+.cart-summary {
+    margin-bottom: 30px; /* Space below cart summary */
+    text-align: center; /* Centers text content */
+}
+
+.cart-item {
+    display: flex; /* Flex layout for item display */
+    justify-content: space-between; /* Space between item details */
+    padding: 10px; /* Padding around each item */
+    border-bottom: 1px solid #eee; /* Light border for separation */
+
+}
+
+
+
+
+.cart-item img {
+    width: 60px; /* Fixed width for item images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.cart-item-details {
+    flex-grow: 1; /* Allow details to take available space */
+
+}
+
+.checkout-form {
+    display: flex; /* Flexbox for the form */
+    flex-direction: column; /* Vertical layout */
+    gap: 20px; /* Space between form elements */
+    margin-top: 20px; /* Space above the form */
+}
+
+label {
+    margin: 10px; /* Compact margin for labels */
+    color: white; /* Dark grey for labels */
+    font-weight: 600;
+}
+
+input {
+    padding: 10px; /* Comfortable padding */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 10px; /* Rounded edges */
+    margin-bottom: 5px; /* Space below input fields */
+    font-size: 1em; /* Font size for consistency */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    width: 100%;
+    margin-top: 1rem;
+}
+
+input:focus {
+    border-color: #6a11cb; /* Color change on focus */
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5); /* Subtle shadow on focus */
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .submit-btn.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+
+@media (max-width: 768px) {
+    .checkout-page {
+        padding: 20px; /* Adjusted padding for smaller screens */
+        font-size: 15px;
+        margin: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Responsive font size */
+    }
+
+    input {
+        font-size: 0.9em; /* Responsive font size */
+    }
+
+    .submit-btn {
+        font-size: 0.9em; /* Responsive font size */
+    }
+}
+
+.inputs{
+    height: auto;
+    width: auto;
+    margin-left: 30px;
+}
+.customise{
+    margin: 10px;
+}
+

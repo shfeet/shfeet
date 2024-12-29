@@ -1,0 +1,152 @@
+.menu-pages {
+  position: relative; 
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background: url('https://res.cloudinary.com/daxeovezx/image/upload/v1732496694/pexels-pushpendra-singh-78160205-8670488-min_vgm1hf.jpg') no-repeat center center;
+  background-size: cover; 
+  z-index: 1; /* Ensures content stays above the overlay */
+}
+
+.menu-pages::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); 
+  z-index: -1; /* Ensures the overlay stays below the content */
+}
+
+
+.header{
+  color: white;
+  font-size: 2rem;
+}
+
+.header2{
+  color: white;
+  font-size: 1rem;
+}
+
+  
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive Layout for Small Screens */
+@media (max-width: 450px) {
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
+  }
+}
+
+  
+  .item-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .item-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .item-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+  }
+  
+.size{
+  margin-bottom: 10px;
+}
+
+  .atc {
+    display: inline-block;
+    background-color: #4B3832; 
+    color: #fff; 
+    font-size: 0.7rem;
+    font-weight: 400;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease; 
+    text-transform: uppercase; 
+  }
+  
+  .atc:hover {
+    background-color: #3A2B27; 
+    transform: translateY(-3px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .atc:active {
+    background-color: #352926; 
+    transform: translateY(1px); 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .atc:focus {
+    outline: none; 
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
+  }
+  
+
+
+
+
+
+
+  /* Notification Styling */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  animation: slideIn 0.5s ease, fadeOut 0.5s ease 2.5s forwards;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.notification.success {
+  background-color: #28a745; /* Green for success */
+}
+
+.notification.error {
+  background-color: #dc3545; /* Red for error */
+}
+
+/* Animation for Notifications */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+

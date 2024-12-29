@@ -1,0 +1,139 @@
+.review-carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  overflow: hidden;
+  width: 100%;
+  
+  height: 320px;
+  margin: auto;
+  /* margin-top: 30px; */
+  margin-bottom: 5rem;
+  max-width: 1000px;
+  
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center; /* Center text horizontally */
+}
+
+.review-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center paragraph and stars vertically */
+  width: 100%;
+  height: 100%; /* Make sure it fills the carousel area */
+}
+
+.review-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  /* margin-bottom: 10px; */
+}
+
+.review-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  max-width: 80%; /* Limit paragraph width for better readability */
+}
+
+.stars {
+  display: flex;
+  justify-content: center; /* Center the stars */
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.star {
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.star.filled {
+  color: #f9c74f;
+}
+
+/* Arrow buttons */
+.arrow-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.arrow-left {
+  left: 10px;
+}
+
+.arrow-right {
+  right: 10px;
+}
+
+/* Dots indicator */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  bottom: 10px;
+  
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #f9c74f;
+}
+
+@media screen and (max-width: 500px) {
+  .review-carousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    overflow: hidden;
+    width: 100%;
+    
+    height: 320px;
+    margin: auto;
+    /* margin-top: 30px; */
+    margin-bottom: 5rem;
+    max-width: 400px;
+    
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center; /* Center text horizontally */
+  }
+
+  .review-item p {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+    max-width: 60%; /* Limit paragraph width for better readability */
+  }
+}
