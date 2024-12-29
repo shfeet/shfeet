@@ -38,7 +38,7 @@ const MenuPage = ({ cartItems, setCartItems }) => {
   const addToCart = (item) => {
     const selectedSize = selectedSizes[item.id];
     if (!selectedSize) {
-      showNotification(`Please select a size for ${item.name}`, 'error');
+      showNotification(`Please select a size before adding to the cart!`, 'error');
       return;
     }
 

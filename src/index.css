@@ -91,6 +91,22 @@ p {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
+
+
+
+  .logo-img {
+    width: 67px; 
+    height: auto; 
+  }
+
+  .cart-icon {
+    cursor: pointer;
+    position: relative;
+    color: black;
+    font-size: 0.7rem;
+  }
+
+
   .nav-links {
     display: none;
   }
@@ -140,7 +156,7 @@ p {
   
   .nav-links-mobile a {
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
     transition: color 0.3s ease;

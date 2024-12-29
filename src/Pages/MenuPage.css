@@ -43,6 +43,23 @@
   .items-grid {
     grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
   }
+
+
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 10px;
+    /* font-weight: bold; */
+    color: #fff;
+    animation: slideIn 0.5s ease, fadeOut 0.5s ease 2.5s forwards;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+
 }
 
   
@@ -115,7 +132,7 @@
   right: 20px;
   padding: 15px 20px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #fff;
   animation: slideIn 0.5s ease, fadeOut 0.5s ease 2.5s forwards;

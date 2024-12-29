@@ -15,7 +15,7 @@ const ProductLines = () => {
     },
     {
       title: "Other Leather Products",
-      description: "Durable and high-quality leather products  for everyone.",
+      description: "Durable and high-quality leather products.",
       img: "https://res.cloudinary.com/daxeovezx/image/upload/v1735498971/belt_1_muj6u6.png", // Replace with your Cloudinary link
     },
     {
@@ -42,3 +42,7 @@ const ProductLines = () => {
 };
 
 export default ProductLines;
+
+
+
+

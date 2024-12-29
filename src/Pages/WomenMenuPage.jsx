@@ -26,13 +26,13 @@ const sampleItems = [
 ];
 
 const WomenMenuPage = ({ cartItems, setCartItems }) => {
-  const [notification, setNotification] = useState({ message: '', visible: false });
+  const [notification, setNotification] = useState({ message: '', type: '', visible: false });
   const [selectedSizes, setSelectedSizes] = useState({});
 
-  const showNotification = (message) => {
-    setNotification({ message, visible: true });
+  const showNotification = (message, type = 'success') => {
+    setNotification({ message, type, visible: true });
     setTimeout(() => {
-      setNotification({ message: '', visible: false });
+      setNotification({ message: '', type: '', visible: false });
     }, 3000); // Notification lasts for 3 seconds
   };
 
@@ -43,7 +43,7 @@ const WomenMenuPage = ({ cartItems, setCartItems }) => {
   const addToCart = (item) => {
     const selectedSize = selectedSizes[item.id];
     if (!selectedSize) {
-      showNotification('Please select a size before adding to the cart!', 'error');
+      showNotification('Please select a size before adding to the cart!', 'error'); // Error notification
       return;
     }
 
@@ -63,14 +63,16 @@ const WomenMenuPage = ({ cartItems, setCartItems }) => {
       setCartItems([...cartItems, { ...item, size: selectedSize, quantity: 1 }]);
     }
 
-    showNotification(`${item.name} (Size ${selectedSize}) has been added to your cart!`);
+    showNotification(`${item.name} (Size ${selectedSize}) has been added to your cart!`, 'success'); // Success notification
   };
 
   return (
     <div>
       {/* Notification */}
       {notification.visible && (
-        <div className="notification">{notification.message}</div>
+        <div className={`notification ${notification.type}`}>
+          {notification.message}
+        </div>
       )}
 
       <section className="menu-page">
