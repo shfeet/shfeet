@@ -4,11 +4,11 @@ import Footer from '../Footer';
 
 const sampleItems = [
   { id: 21, name: "ODIBEZA", price: 20000, description: "Beaded Halfshoe", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422510/6_clkms1.jpg' },
-  { id: 22, name: "AKWA NWA", price: 10800, description: "Suede open toe Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422509/11_d57r2y.jpg' },
+  { id: 22, name: "AKWA NWA", price: 10000, description: "Suede open toe Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422509/11_d57r2y.jpg' },
   { id: 23, name: "ASAMMA", price: 15000, description: "Denim X-Strap", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422509/12_rumqfa.jpg' },
   { id: 24, name: "EGO OYIBO", price: 25000, description: "Open toe Birken Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422505/13_rszfsi.jpg' },
   { id: 25, name: "MKPULU MMA", price: 10000, description: "leopard print Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422504/14_dpbwas.jpg' },
-  { id: 26, name: "MANRIA", price: 10000, description: "Bow strap Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422504/16_lghay0.jpg' },
+  { id: 26, name: "MANARIA", price: 10000, description: "Bow strap Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422504/16_lghay0.jpg' },
   { id: 27, name: "MKPULU MMA 2.0", price: 10000, description: "Croc skin Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422500/17_klhj4a.jpg' },
   { id: 28, name: "UGEGBE", price: 10000, description: "Shiny Croc print Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422499/18_d1zjta.jpg' },
   { id: 29, name: "MMIRIDOROEDO", price: 10000, description: " Embelished Open toe Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422499/10_fiwnlx.jpg' },
@@ -18,7 +18,7 @@ const sampleItems = [
   { id: 33, name: "EGODI", price: 15000, description: "Scissors cut Platform", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422485/15_u6c27r.jpg' },
   { id: 34, name: "URUNDU", price: 10000, description: "Plain & Pattern Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422485/19_ut9rue.jpg' },
   { id: 35, name: "AKWA UGO", price: 12000, description: "T-Strap Sandals", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422485/7_dwunz8.jpg' },
-  { id: 36, name: "MKPULUMMA", price: 10000, description: "Inverted rope Slides", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422485/3_zakxvc.jpg' },
+  { id: 36, name: "ONODU UGO", price: 10000, description: "Inverted rope Slides", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422485/3_zakxvc.jpg' },
   { id: 37, name: "OPURUICHE", price: 15000, description: "Bow Platform Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422485/1_qkcwxe.jpg' },
   { id: 38, name: "IFEDIMMA", price: 10000, description: "Knotted flap Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422485/20_el1cik.jpg' },
   { id: 39, name: "MMIRIMMA", price: 10000, description: "X-Strap Slide", image: 'https://res.cloudinary.com/daxeovezx/image/upload/v1735422484/4_hc4xmp.jpg' },

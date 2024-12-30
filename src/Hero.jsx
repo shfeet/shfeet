@@ -6,7 +6,7 @@ const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const images = [
-    "https://res.cloudinary.com/daxeovezx/image/upload/v1732734941/hero1-min_dmebwh.jpg", // Replace with your Cloudinary links
+    "https://res.cloudinary.com/daxeovezx/image/upload/v1735557211/hero_replacement-min_ldivnm.jpg", // Replace with your Cloudinary links
     "https://res.cloudinary.com/daxeovezx/image/upload/v1732734941/pexels-kalz-michael-1277172-3558804-min_x7wavq.jpg",
     "https://res.cloudinary.com/daxeovezx/image/upload/v1735494758/hero3_lutn7h.jpg",
   ];
@@ -42,7 +42,7 @@ const HeroSection = () => {
         >
           Each piece is made from a 100% leather quality and handmade with extreme precision and love.
         </motion.p>
-        <a href="/menu">
+        {/* <a href="/menu">
         <motion.button
           className="explore-btn"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -51,7 +51,7 @@ const HeroSection = () => {
         >
           Explore More
         </motion.button>
-        </a>
+        </a> */}
       </div>
     </div>
   );

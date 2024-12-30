@@ -15,12 +15,12 @@ const ProductLines = () => {
     },
     {
       title: "Other Leather Products",
-      description: "Durable and high-quality leather products.",
+      description: "Durable and high-quality unique leather products.",
       img: "https://res.cloudinary.com/daxeovezx/image/upload/v1735498971/belt_1_muj6u6.png", // Replace with your Cloudinary link
     },
     {
       title: "Custom Designs",
-      description: "Tailor-made footwear  designed  just for you 💖.",
+      description: "Tailor-made footwear  designed  just for everyone .",
       img: "https://res.cloudinary.com/daxeovezx/image/upload/v1732752626/smart-shoe_suidyn.png", // Replace with your Cloudinary link
     },
   ];

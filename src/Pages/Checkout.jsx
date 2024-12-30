@@ -30,7 +30,7 @@ const Checkout = ({ cartItems, clearCart }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/checkout', { // Replace with your API endpoint
+      const response = await fetch('https://shfeet-backend-3.vercel.app/api/checkout', { // Replace with your API endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -164,8 +164,15 @@ const Checkout = ({ cartItems, clearCart }) => {
           >
             {buttonText}
           </button>
-          <p>Note: All orders will be fulfilled & delivered after 7 working days.</p>
+          <p>Note: All orders will be fulfilled & delivered after 7 working days.            
+          </p>
+          <p>Delivery fee varies depending on state and location.
+            Thank you for your understanding.
+          </p>
+          
+          
         </form>
+
 
         {/* Modal for Order Status */}
         <AnimatePresence>
