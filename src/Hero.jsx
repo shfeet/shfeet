@@ -40,7 +40,7 @@ const HeroSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          Each piece is made from a 100% leather quality and handmade with extreme precision and love.
+          Each piece is made from a 100% quality leather and handmade with extreme precision and love.
         </motion.p>
         {/* <a href="/menu">
         <motion.button
