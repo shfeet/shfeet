@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram, FaFacebookF, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaFacebookF, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css'; // Create a corresponding CSS file for styling
 import { Link } from 'react-router-dom';
 
@@ -28,10 +28,9 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Socials</h4>
           <ul className="social-icons">
-            <li className='instagram'><a href="https://instagram.com" ><FaInstagram color="#E1306C" /></a></li>
-            <li className='facebook'><a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF color="#4267B2"/></a></li>
-            <li className='twitter'><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter color="#1DA1F2"/></a></li>
-            <li className='linkedin'><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin color="#1DA1F2"/></a></li>
+            <li className='instagram'><a href="https://www.instagram.com/sh_feet_official/profilecard/?igsh=emUxMW5xMGlvNXAw" ><FaInstagram color="#E1306C" /></a></li>
+            <li className='facebook'><a href="https://www.facebook.com/chisom.ugongene?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"><FaFacebookF color="#4267B2"/></a></li>
+            <li className='linkedin'><a href="https://wa.me/2348133267721" target="_blank" rel="noopener noreferrer"><FaWhatsapp color="#1DA1F2"/></a></li>
           </ul>
         </div>
       </div>

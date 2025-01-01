@@ -1,0 +1,94 @@
+.cta-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    flex-wrap: wrap; /* Ensure boxes wrap on smaller screens */
+  }
+  
+  .cta-box {
+    position: relative;
+    flex: 1;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 10px;
+    min-width: 45%; /* Ensure boxes remain visible when stacked */
+  }
+
+  
+.cta-box :hover{
+    scale: 1.1;
+}
+  
+  .cta-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 100%;
+    position: relative;
+  }
+  
+  .image-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .cta-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
+  .produc {
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+
+
+
+
+  @media (max-width: 500px) {
+    
+  
+    .cta-box {
+      min-width: 100%; /* Make boxes take full width */
+      height: 250px; /* Adjust height for smaller screens */
+    }
+  
+    .cta-text {
+      font-size: 1.4rem; /* Adjust text size for smaller screens */
+    }
+
+
+
+  }
+  

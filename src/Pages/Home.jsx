@@ -6,12 +6,14 @@ import Review from './Review';
 import Footer from '../Footer';
 import './Home.css';
 import ContactUs from '../ContactUs';
+import CallToActionSection from '../CallToActionSection';
 
  function Home() {
   return (
     <>
     <Hero/>
     <ProductLines/>
+    <CallToActionSection/>
     <WhyChooseSHFeet/>
     <Review/>
     <ContactUs/>
