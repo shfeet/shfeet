@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Routes,  } from 'react-router-dom'; 
 import Navbar from './Navbar';
 // import Modal from './Modal';
 import MenuPage from './Pages/MenuPage';
@@ -9,13 +9,14 @@ import AboutUs from './Pages/AboutUs';
 import OrderModal from './Pages/OrderModal';// Import the OrderModal component
 import Home from './Pages/Home';
 
-const AppContent = ({ cartItems, setCartItems, updateCartItem, clearCart, showOrderModal, setShowOrderModal, orderStatus }) => {
-  const [showModal, setShowModal] = useState(true);
-  const location = useLocation(); 
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+const AppContent = ({ cartItems, setCartItems, updateCartItem, clearCart, showOrderModal, setShowOrderModal, orderStatus }) => {
+  // const [showModal, setShowModal] = useState(true);
+  // const location = useLocation(); 
+
+  // const handleCloseModal = () => {
+  //   setShowModal(false);
+  // };
 
   const removeFromCart = (index) => {
     const updatedCart = cartItems.filter((_, i) => i !== index);
@@ -44,6 +45,7 @@ const AppContent = ({ cartItems, setCartItems, updateCartItem, clearCart, showOr
         
         <Route path="/checkout" element={<Checkout cartItems={cartItems} clearCart={clearCart} setShowOrderModal={setShowOrderModal} />} /> {/* Pass setShowOrderModal to Checkout */}
         <Route path="/about" element={<AboutUs />} />
+      
         {/* Other routes here */}
       </Routes>
       {/* {location.pathname === '/' && <Modal show={showModal} onClose={handleCloseModal} />} */}
@@ -99,6 +101,7 @@ function App() {
         showOrderModal={showOrderModal} 
         setShowOrderModal={setShowOrderModal} 
         orderStatus={orderStatus} 
+        setOrderStatus={setOrderStatus}
       />
     </Router>
   );

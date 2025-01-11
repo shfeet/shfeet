@@ -1,7 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Checkout.css';
 import { AnimatePresence } from 'framer-motion';
 import OrderModal from './OrderModal';
+
+const statesAndRegions = {
+  "North": ["Kano", "Kaduna", "Sokoto", "Borno", "Yobe", "Kebbi", "Zamfara", "Jigawa", "Gombe", "Adamawa", "Taraba"],
+  "South": ["Lagos", "Ogun", "Ondo", "Ekiti", "Osun", "Oyo"],
+  "East": ["Anambra", "Enugu", "Ebonyi", "Abia", "Imo"],
+  "West": ["Kwara", "Kogi", "Niger", "Benue", "Plateau", "Nassarawa", "FCT"],
+};
+
+const deliveryFees = {
+  North: 4000,
+  South: 4000,
+  East: 4000,
+  West: 4000,
+};
 
 const Checkout = ({ cartItems, clearCart }) => {
   const [formData, setFormData] = useState({
@@ -9,7 +23,9 @@ const Checkout = ({ cartItems, clearCart }) => {
     email: '',
     address: '',
     phone: '',
-    customize: '', // Optional customization field
+    state: '',
+    customize: '',
+    delivery: '0', // Initialize delivery fee
   });
 
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
@@ -22,6 +38,32 @@ const Checkout = ({ cartItems, clearCart }) => {
     setFormData({ ...formData, [name]: value });
   };
 
+  useEffect(() => {
+    let deliveryFee = 0;
+
+    const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+
+    if (totalQuantity > 3) {
+      deliveryFee = 6000; // Set delivery fee to 6000 if total quantity of items exceeds 3
+    } else {
+      const selectedRegion = Object.keys(statesAndRegions).find(region =>
+        statesAndRegions[region].includes(formData.state)
+      );
+      deliveryFee = deliveryFees[selectedRegion] || 0; // Get region-based delivery fee
+    }
+
+    setFormData(prevFormData => ({
+      ...prevFormData,
+      delivery: deliveryFee.toString(), // Update delivery fee
+    }));
+  }, [formData.state, cartItems]);
+
+  const calculateTotal = () => {
+    const itemsTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    const deliveryFee = parseInt(formData.delivery, 10) || 0; // Use delivery fee from formData
+    return itemsTotal + deliveryFee;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -30,7 +72,7 @@ const Checkout = ({ cartItems, clearCart }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://shfeet-backend-3.vercel.app/api/checkout', { // Replace with your API endpoint
+      const response = await fetch('https://shfeet-backend.vercel.app/api/checkout', { // Replace with your API endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -47,6 +89,8 @@ const Checkout = ({ cartItems, clearCart }) => {
           email: '',
           address: '',
           phone: '',
+          state: '',
+          delivery: '0',
           customize: '', // Reset customization field on success
         });
       } else {
@@ -63,10 +107,6 @@ const Checkout = ({ cartItems, clearCart }) => {
         setIsSubmitting(false);
       }, 2000); // Reset state after 2 seconds
     }
-  };
-
-  const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
   return (
@@ -145,6 +185,27 @@ const Checkout = ({ cartItems, clearCart }) => {
             />
           </label>
           <label>
+            State:
+            <select
+              className="inputs"
+              name="state"
+              value={formData.state}
+              onChange={handleChange}
+              required
+            >
+              <option value="">Select State</option>
+              {Object.values(statesAndRegions).flat().map((state, index) => (
+                <option key={index} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Delivery Fee: ₦ <span>{formData.delivery || '0'}</span>
+          </label>
+
+          <label>
             Customize Your Order:
             <input
               className="input"
@@ -153,7 +214,6 @@ const Checkout = ({ cartItems, clearCart }) => {
               name="customize"
               value={formData.customize}
               onChange={handleChange}
-              required
             />
           </label>
 
@@ -164,22 +224,20 @@ const Checkout = ({ cartItems, clearCart }) => {
           >
             {buttonText}
           </button>
-          <p>Note: All orders will be fulfilled & delivered after 7 working days.            
+          <p>
+          Please check your mail for your order details and next steps.<br />
+Note:
+Orders are processed and delivered within 7 working days.<br />
+Delivery fees vary by location.
+Thank you for choosing us!
           </p>
-          <p>Delivery fee varies depending on state and location.
-            Thank you for your understanding.
-          </p>
-          
-          
         </form>
 
-
-        {/* Modal for Order Status */}
         <AnimatePresence>
           {isModalOpen && (
             <OrderModal
               status={orderStatus}
-              closeModal={() => setIsModalOpen(false)} // Pass function to close modal
+              closeModal={() => setIsModalOpen(false)}
             />
           )}
         </AnimatePresence>

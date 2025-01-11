@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Cart.css';
 import { FaTrash, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Cart = ({ cartItems, updateCartItem, removeFromCart, closeCart, onCheckout, clearCart }) => {
+  const cartRef = useRef(null);
+
+  // Close cart when clicking outside the dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (cartRef.current && !cartRef.current.contains(event.target)) {
+        closeCart();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [closeCart]);
+
   const handleButtonClick = (e) => {
     e.stopPropagation(); // Prevent event from bubbling up
   };
@@ -12,6 +28,7 @@ const Cart = ({ cartItems, updateCartItem, removeFromCart, closeCart, onCheckout
   return (
     <motion.div
       className="cart-dropdown-content"
+      ref={cartRef}
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.2 }}
