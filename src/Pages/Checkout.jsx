@@ -228,7 +228,6 @@ const Checkout = ({ cartItems, clearCart }) => {
           Please check your mail for your order details and next steps.<br />
 Note:
 Orders are processed and delivered within 7 working days.<br />
-Delivery fees vary by location.
 Thank you for choosing us!
           </p>
         </form>
