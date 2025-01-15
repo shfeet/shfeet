@@ -4,10 +4,23 @@ import { AnimatePresence } from 'framer-motion';
 import OrderModal from './OrderModal';
 
 const statesAndRegions = {
-  "North": ["Kano", "Kaduna", "Sokoto", "Borno", "Yobe", "Kebbi", "Zamfara", "Jigawa", "Gombe", "Adamawa", "Taraba"],
-  "South": ["Lagos", "Ogun", "Ondo", "Ekiti", "Osun", "Oyo"],
-  "East": ["Anambra", "Enugu", "Ebonyi", "Abia", "Imo"],
-  "West": ["Kwara", "Kogi", "Niger", "Benue", "Plateau", "Nassarawa", "FCT"],
+  "North": [
+    "Kano", "Kaduna", "Sokoto", "Borno", "Yobe", 
+    "Kebbi", "Zamfara", "Jigawa", "Gombe", "Adamawa", 
+    "Taraba", "Katsina", "Bauchi"
+  ],
+  "South": [
+    "Lagos", "Ogun", "Ondo", "Ekiti", "Osun", 
+    "Oyo", "Edo", "Delta", "Bayelsa", "Rivers", 
+    "Cross River", "Akwa Ibom"
+  ],
+  "East": [
+    "Anambra", "Enugu", "Ebonyi", "Abia", "Imo"
+  ],
+  "West": [
+    "Kwara", "Kogi", "Niger", "Benue", "Plateau", 
+    "Nassarawa", "FCT"
+  ]
 };
 
 const deliveryFees = {
